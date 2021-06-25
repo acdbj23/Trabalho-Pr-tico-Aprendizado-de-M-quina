@@ -1,0 +1,108 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AutoWEKAClassifier -seed 123 -timeLimit 45 -memLimit 2048 -nBestConfigs 1 -metric errorRate -parallelRuns 1
+Relation:     xAPI-Edu-Data
+Instances:    480
+Attributes:   17
+              gender
+              NationalITy
+              PlaceofBirth
+              StageID
+              GradeID
+              SectionID
+              Topic
+              Semester
+              Relation
+              raisedhands
+              VisITedResources
+              AnnouncementsView
+              Discussion
+              ParentAnsweringSurvey
+              ParentschoolSatisfaction
+              StudentAbsenceDays
+              Class
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+best classifier: weka.classifiers.meta.AdaBoostM1
+arguments: [-P, 100, -I, 27, -Q, -S, 1, -W, weka.classifiers.trees.LMT, --, -R, -M, 3, -W, 0.103803246488258, -A]
+attribute search: null
+attribute search arguments: []
+attribute evaluation: null
+attribute evaluation arguments: []
+metric: errorRate
+estimated errorRate: 0.0
+training time on evaluation dataset: 6.3 seconds
+
+You can use the chosen classifier in your own code as follows:
+
+Classifier classifier = AbstractClassifier.forName("weka.classifiers.meta.AdaBoostM1", new String[]{"-P", "100", "-I", "27", "-Q", "-S", "1", "-W", "weka.classifiers.trees.LMT", "--", "-R", "-M", "3", "-W", "0.103803246488258", "-A"});
+classifier.buildClassifier(instances);
+
+
+Correctly Classified Instances         480              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances              480     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 211   0   0 |   a = M
+   0 127   0 |   b = L
+   0   0 142 |   c = H
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     M
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     L
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     H
+Weighted Avg.    1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     
+
+Temporary run directories:
+/tmp/autoweka6898384597468063696/
+
+
+For better performance, try giving Auto-WEKA more time.
+Tried 764 configurations; to get good results reliably you may need to allow for trying thousands of configurations.
+
+
+Time taken to build model: 2280.88 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         480              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances              480     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     M
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     L
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     H
+Weighted Avg.    1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 211   0   0 |   a = M
+   0 127   0 |   b = L
+   0   0 142 |   c = H
+
+

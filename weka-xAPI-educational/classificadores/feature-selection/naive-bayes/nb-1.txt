@@ -1,0 +1,94 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     xAPI-Edu-Data-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    480
+Attributes:   8
+              gender
+              Relation
+              raisedhands
+              VisITedResources
+              AnnouncementsView
+              ParentAnsweringSurvey
+              StudentAbsenceDays
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                          Class
+Attribute                     M       L       H
+                         (0.44)  (0.27)   (0.3)
+================================================
+gender
+  M                        136.0   104.0    68.0
+  F                         77.0    25.0    76.0
+  [total]                  213.0   129.0   144.0
+
+Relation
+  Father                   138.0   105.0    43.0
+  Mum                       75.0    24.0   101.0
+  [total]                  213.0   129.0   144.0
+
+raisedhands
+  mean                   48.9088 16.8562 70.3182
+  std. dev.              26.8908 17.1462 22.5134
+  weight sum                 211     127     142
+  precision               1.2346  1.2346  1.2346
+
+VisITedResources
+  mean                   60.5954   18.31 78.7262
+  std. dev.              28.0917 19.0818 19.2617
+  weight sum                 211     127     142
+  precision                1.125   1.125   1.125
+
+AnnouncementsView
+  mean                   40.9788 15.6548 53.3868
+  std. dev.              23.9845 15.2338 24.9186
+  weight sum                 211     127     142
+  precision               1.1264  1.1264  1.1264
+
+ParentAnsweringSurvey
+  Yes                      129.0    29.0   115.0
+  No                        84.0   100.0    29.0
+  [total]                  213.0   129.0   144.0
+
+StudentAbsenceDays
+  Under-7                  141.0    12.0   139.0
+  Above-7                   72.0   117.0     5.0
+  [total]                  213.0   129.0   144.0
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         333               69.375  %
+Incorrectly Classified Instances       147               30.625  %
+Kappa statistic                          0.5402
+Mean absolute error                      0.2193
+Root mean squared error                  0.3752
+Relative absolute error                 50.6627 %
+Root relative squared error             80.6393 %
+Total Number of Instances              480     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,540    0,175    0,708      0,540    0,613      0,384    0,795     0,704     M
+                 0,882    0,122    0,723      0,882    0,794      0,717    0,954     0,876     L
+                 0,754    0,169    0,652      0,754    0,699      0,563    0,887     0,750     H
+Weighted Avg.    0,694    0,159    0,695      0,694    0,686      0,525    0,864     0,763     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 114  40  57 |   a = M
+  15 112   0 |   b = L
+  32   3 107 |   c = H
+
+

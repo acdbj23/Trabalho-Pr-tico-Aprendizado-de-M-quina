@@ -1,0 +1,109 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     xAPI-Edu-Data-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    480
+Attributes:   8
+              gender
+              Relation
+              raisedhands
+              VisITedResources
+              AnnouncementsView
+              ParentAnsweringSurvey
+              StudentAbsenceDays
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+StudentAbsenceDays = Under-7
+|   VisITedResources <= 51
+|   |   raisedhands <= 13
+|   |   |   gender = M
+|   |   |   |   VisITedResources <= 16: L (7.0)
+|   |   |   |   VisITedResources > 16: M (2.0/1.0)
+|   |   |   gender = F: M (9.0/1.0)
+|   |   raisedhands > 13: M (51.0/10.0)
+|   VisITedResources > 51
+|   |   Relation = Father
+|   |   |   VisITedResources <= 88: M (57.0/14.0)
+|   |   |   VisITedResources > 88
+|   |   |   |   AnnouncementsView <= 18: M (7.0/1.0)
+|   |   |   |   AnnouncementsView > 18
+|   |   |   |   |   gender = M: H (19.0/1.0)
+|   |   |   |   |   gender = F
+|   |   |   |   |   |   ParentAnsweringSurvey = Yes: H (8.0/2.0)
+|   |   |   |   |   |   ParentAnsweringSurvey = No: M (2.0)
+|   |   Relation = Mum
+|   |   |   gender = M
+|   |   |   |   ParentAnsweringSurvey = Yes: H (44.0/15.0)
+|   |   |   |   ParentAnsweringSurvey = No
+|   |   |   |   |   raisedhands <= 73: M (7.0)
+|   |   |   |   |   raisedhands > 73
+|   |   |   |   |   |   VisITedResources <= 72: H (2.0)
+|   |   |   |   |   |   VisITedResources > 72: M (3.0/1.0)
+|   |   |   gender = F
+|   |   |   |   ParentAnsweringSurvey = Yes
+|   |   |   |   |   raisedhands <= 35: M (4.0/1.0)
+|   |   |   |   |   raisedhands > 35: H (43.0/2.0)
+|   |   |   |   ParentAnsweringSurvey = No
+|   |   |   |   |   AnnouncementsView <= 50
+|   |   |   |   |   |   VisITedResources <= 81: M (5.0)
+|   |   |   |   |   |   VisITedResources > 81
+|   |   |   |   |   |   |   AnnouncementsView <= 19: H (5.0)
+|   |   |   |   |   |   |   AnnouncementsView > 19
+|   |   |   |   |   |   |   |   VisITedResources <= 86: H (2.0)
+|   |   |   |   |   |   |   |   VisITedResources > 86: M (2.0)
+|   |   |   |   |   AnnouncementsView > 50: H (10.0)
+StudentAbsenceDays = Above-7
+|   VisITedResources <= 26: L (103.0/11.0)
+|   VisITedResources > 26
+|   |   AnnouncementsView <= 11: L (9.0)
+|   |   AnnouncementsView > 11
+|   |   |   ParentAnsweringSurvey = Yes: M (53.0/7.0)
+|   |   |   ParentAnsweringSurvey = No
+|   |   |   |   raisedhands <= 23: L (7.0)
+|   |   |   |   raisedhands > 23
+|   |   |   |   |   gender = M: M (13.0/2.0)
+|   |   |   |   |   gender = F
+|   |   |   |   |   |   VisITedResources <= 44: L (2.0)
+|   |   |   |   |   |   VisITedResources > 44: M (4.0/1.0)
+
+Number of Leaves  : 	27
+
+Size of the tree : 	53
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         365               76.0417 %
+Incorrectly Classified Instances       115               23.9583 %
+Kappa statistic                          0.6331
+Mean absolute error                      0.2083
+Root mean squared error                  0.3629
+Relative absolute error                 48.1256 %
+Root relative squared error             77.9957 %
+Total Number of Instances              480     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,711    0,190    0,746      0,711    0,728      0,524    0,771     0,685     M
+                 0,858    0,082    0,790      0,858    0,823      0,756    0,935     0,795     L
+                 0,746    0,104    0,752      0,746    0,749      0,644    0,859     0,678     H
+Weighted Avg.    0,760    0,136    0,759      0,760    0,759      0,621    0,841     0,712     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 150  27  34 |   a = M
+  17 109   1 |   b = L
+  34   2 106 |   c = H
+
+

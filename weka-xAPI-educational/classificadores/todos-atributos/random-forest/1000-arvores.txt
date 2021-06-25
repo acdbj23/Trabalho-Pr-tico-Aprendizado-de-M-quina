@@ -1,0 +1,63 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 1000 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     xAPI-Edu-Data
+Instances:    480
+Attributes:   17
+              gender
+              NationalITy
+              PlaceofBirth
+              StageID
+              GradeID
+              SectionID
+              Topic
+              Semester
+              Relation
+              raisedhands
+              VisITedResources
+              AnnouncementsView
+              Discussion
+              ParentAnsweringSurvey
+              ParentschoolSatisfaction
+              StudentAbsenceDays
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 1000 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.78 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         370               77.0833 %
+Incorrectly Classified Instances       110               22.9167 %
+Kappa statistic                          0.6453
+Mean absolute error                      0.244 
+Root mean squared error                  0.3325
+Relative absolute error                 56.3712 %
+Root relative squared error             71.4695 %
+Total Number of Instances              480     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,768    0,223    0,730      0,768    0,748      0,542    0,841     0,814     M
+                 0,858    0,059    0,838      0,858    0,848      0,793    0,969     0,901     L
+                 0,697    0,086    0,773      0,697    0,733      0,631    0,921     0,832     H
+Weighted Avg.    0,771    0,139    0,771      0,771    0,770      0,635    0,899     0,842     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 162  21  28 |   a = M
+  17 109   1 |   b = L
+  43   0  99 |   c = H
+
+

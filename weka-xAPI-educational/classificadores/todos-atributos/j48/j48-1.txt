@@ -1,0 +1,119 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     xAPI-Edu-Data
+Instances:    480
+Attributes:   17
+              gender
+              NationalITy
+              PlaceofBirth
+              StageID
+              GradeID
+              SectionID
+              Topic
+              Semester
+              Relation
+              raisedhands
+              VisITedResources
+              AnnouncementsView
+              Discussion
+              ParentAnsweringSurvey
+              ParentschoolSatisfaction
+              StudentAbsenceDays
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+StudentAbsenceDays = Under-7
+|   AnnouncementsView <= 10: M (26.0/11.0)
+|   AnnouncementsView > 10
+|   |   VisITedResources <= 55
+|   |   |   ParentAnsweringSurvey = Yes
+|   |   |   |   Relation = Father
+|   |   |   |   |   StageID = lowerlevel
+|   |   |   |   |   |   VisITedResources <= 29: H (3.0)
+|   |   |   |   |   |   VisITedResources > 29: M (3.0)
+|   |   |   |   |   StageID = MiddleSchool: M (12.0)
+|   |   |   |   |   StageID = HighSchool: M (4.0)
+|   |   |   |   Relation = Mum: H (11.0/4.0)
+|   |   |   ParentAnsweringSurvey = No: M (25.0/4.0)
+|   |   VisITedResources > 55
+|   |   |   Relation = Father
+|   |   |   |   VisITedResources <= 88: M (50.0/12.0)
+|   |   |   |   VisITedResources > 88
+|   |   |   |   |   ParentAnsweringSurvey = Yes
+|   |   |   |   |   |   Discussion <= 86: H (22.0/1.0)
+|   |   |   |   |   |   Discussion > 86: M (2.0)
+|   |   |   |   |   ParentAnsweringSurvey = No
+|   |   |   |   |   |   gender = M: H (4.0/1.0)
+|   |   |   |   |   |   gender = F: M (5.0)
+|   |   |   Relation = Mum
+|   |   |   |   gender = M
+|   |   |   |   |   PlaceofBirth = KuwaIT
+|   |   |   |   |   |   Discussion <= 48: M (2.0)
+|   |   |   |   |   |   Discussion > 48: H (11.0/1.0)
+|   |   |   |   |   PlaceofBirth = lebanon: H (0.0)
+|   |   |   |   |   PlaceofBirth = Egypt: H (1.0)
+|   |   |   |   |   PlaceofBirth = SaudiArabia: H (1.0)
+|   |   |   |   |   PlaceofBirth = USA: M (1.0)
+|   |   |   |   |   PlaceofBirth = Jordan: M (25.0/9.0)
+|   |   |   |   |   PlaceofBirth = venzuela: H (1.0)
+|   |   |   |   |   PlaceofBirth = Iran: M (1.0)
+|   |   |   |   |   PlaceofBirth = Tunis: H (2.0)
+|   |   |   |   |   PlaceofBirth = Morocco: M (2.0)
+|   |   |   |   |   PlaceofBirth = Syria: H (0.0)
+|   |   |   |   |   PlaceofBirth = Iraq: H (4.0)
+|   |   |   |   |   PlaceofBirth = Palestine: H (2.0)
+|   |   |   |   |   PlaceofBirth = Lybia: H (0.0)
+|   |   |   |   gender = F: H (69.0/11.0)
+StudentAbsenceDays = Above-7
+|   VisITedResources <= 26
+|   |   raisedhands <= 42: L (100.0/9.0)
+|   |   raisedhands > 42: M (3.0/1.0)
+|   VisITedResources > 26
+|   |   AnnouncementsView <= 11: L (9.0)
+|   |   AnnouncementsView > 11
+|   |   |   ParentAnsweringSurvey = Yes: M (53.0/7.0)
+|   |   |   ParentAnsweringSurvey = No
+|   |   |   |   raisedhands <= 23: L (7.0)
+|   |   |   |   raisedhands > 23: M (19.0/5.0)
+
+Number of Leaves  : 	34
+
+Size of the tree : 	54
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         364               75.8333 %
+Incorrectly Classified Instances       116               24.1667 %
+Kappa statistic                          0.6289
+Mean absolute error                      0.2155
+Root mean squared error                  0.3632
+Relative absolute error                 49.7768 %
+Root relative squared error             78.0737 %
+Total Number of Instances              480     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,711    0,197    0,739      0,711    0,725      0,516    0,764     0,689     M
+                 0,803    0,054    0,843      0,803    0,823      0,761    0,919     0,775     L
+                 0,789    0,130    0,718      0,789    0,752      0,642    0,866     0,717     H
+Weighted Avg.    0,758    0,139    0,760      0,758    0,759      0,618    0,835     0,720     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 150  17  44 |   a = M
+  25 102   0 |   b = L
+  28   2 112 |   c = H
+
+

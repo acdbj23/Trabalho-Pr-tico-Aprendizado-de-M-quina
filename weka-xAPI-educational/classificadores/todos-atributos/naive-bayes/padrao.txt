@@ -1,0 +1,193 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     xAPI-Edu-Data
+Instances:    480
+Attributes:   17
+              gender
+              NationalITy
+              PlaceofBirth
+              StageID
+              GradeID
+              SectionID
+              Topic
+              Semester
+              Relation
+              raisedhands
+              VisITedResources
+              AnnouncementsView
+              Discussion
+              ParentAnsweringSurvey
+              ParentschoolSatisfaction
+              StudentAbsenceDays
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                             Class
+Attribute                        M       L       H
+                            (0.44)  (0.27)   (0.3)
+===================================================
+gender
+  M                           136.0   104.0    68.0
+  F                            77.0    25.0    76.0
+  [total]                     213.0   129.0   144.0
+
+NationalITy
+  KW                           76.0    69.0    37.0
+  lebanon                       7.0     3.0    10.0
+  Egypt                         5.0     4.0     3.0
+  SaudiArabia                   5.0     2.0     7.0
+  USA                           3.0     2.0     4.0
+  Jordan                       83.0    38.0    54.0
+  venzuela                      1.0     1.0     2.0
+  Iran                          5.0     3.0     1.0
+  Tunis                         6.0     5.0     4.0
+  Morocco                       3.0     2.0     2.0
+  Syria                         4.0     3.0     3.0
+  Palestine                    17.0     1.0    13.0
+  Iraq                          9.0     1.0    15.0
+  Lybia                         1.0     7.0     1.0
+  [total]                     225.0   141.0   156.0
+
+PlaceofBirth
+  KuwaIT                       77.0    70.0    36.0
+  lebanon                       7.0     3.0    12.0
+  Egypt                         4.0     4.0     4.0
+  SaudiArabia                   6.0     5.0     8.0
+  USA                           9.0     3.0     7.0
+  Jordan                       90.0    35.0    54.0
+  venzuela                      1.0     1.0     2.0
+  Iran                          5.0     3.0     1.0
+  Tunis                         4.0     4.0     4.0
+  Morocco                       3.0     2.0     2.0
+  Syria                         4.0     2.0     3.0
+  Iraq                          9.0     1.0    15.0
+  Palestine                     5.0     1.0     7.0
+  Lybia                         1.0     7.0     1.0
+  [total]                     225.0   141.0   156.0
+
+StageID
+  lowerlevel                   80.0    66.0    56.0
+  MiddleSchool                119.0    55.0    77.0
+  HighSchool                   15.0     9.0    12.0
+  [total]                     214.0   130.0   145.0
+
+GradeID
+  G-04                         24.0    12.0    15.0
+  G-07                         45.0    29.0    30.0
+  G-08                         59.0    26.0    34.0
+  G-06                         17.0     3.0    15.0
+  G-05                          1.0     4.0     1.0
+  G-09                          5.0     2.0     1.0
+  G-12                          4.0     5.0     5.0
+  G-11                          6.0     3.0     7.0
+  G-10                          3.0     2.0     2.0
+  G-02                         57.0    51.0    42.0
+  [total]                     221.0   137.0   152.0
+
+SectionID
+  A                           129.0    72.0    85.0
+  B                            67.0    49.0    54.0
+  C                            18.0     9.0     6.0
+  [total]                     214.0   130.0   145.0
+
+Topic
+  IT                           43.0    39.0    16.0
+  Math                          9.0     8.0     7.0
+  Arabic                       24.0    18.0    20.0
+  Science                      26.0    11.0    17.0
+  English                      19.0    11.0    18.0
+  Quran                         9.0     7.0     9.0
+  Spanish                      13.0     9.0     6.0
+  French                       30.0    17.0    21.0
+  History                      13.0     4.0     5.0
+  Biology                      11.0     5.0    17.0
+  Chemistry                     7.0     9.0    11.0
+  Geology                      19.0     1.0     7.0
+  [total]                     223.0   139.0   154.0
+
+Semester
+  F                           107.0    78.0    63.0
+  S                           106.0    51.0    81.0
+  [total]                     213.0   129.0   144.0
+
+Relation
+  Father                      138.0   105.0    43.0
+  Mum                          75.0    24.0   101.0
+  [total]                     213.0   129.0   144.0
+
+raisedhands
+  mean                      48.9088 16.8562 70.3182
+  std. dev.                 26.8908 17.1462 22.5134
+  weight sum                    211     127     142
+  precision                  1.2346  1.2346  1.2346
+
+VisITedResources
+  mean                      60.5954   18.31 78.7262
+  std. dev.                 28.0917 19.0818 19.2617
+  weight sum                    211     127     142
+  precision                   1.125   1.125   1.125
+
+AnnouncementsView
+  mean                      40.9788 15.6548 53.3868
+  std. dev.                 23.9845 15.2338 24.9186
+  weight sum                    211     127     142
+  precision                  1.1264  1.1264  1.1264
+
+Discussion
+  mean                      43.7788 30.7968 53.6526
+  std. dev.                 26.0678 25.6083 27.1279
+  weight sum                    211     127     142
+  precision                  1.1011  1.1011  1.1011
+
+ParentAnsweringSurvey
+  Yes                         129.0    29.0   115.0
+  No                           84.0   100.0    29.0
+  [total]                     213.0   129.0   144.0
+
+ParentschoolSatisfaction
+  Good                        132.0    44.0   119.0
+  Bad                          81.0    85.0    25.0
+  [total]                     213.0   129.0   144.0
+
+StudentAbsenceDays
+  Under-7                     141.0    12.0   139.0
+  Above-7                      72.0   117.0     5.0
+  [total]                     213.0   129.0   144.0
+
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         325               67.7083 %
+Incorrectly Classified Instances       155               32.2917 %
+Kappa statistic                          0.513 
+Mean absolute error                      0.2251
+Root mean squared error                  0.397 
+Relative absolute error                 52.0046 %
+Root relative squared error             85.3312 %
+Total Number of Instances              480     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,540    0,208    0,671      0,540    0,598      0,345    0,771     0,696     M
+                 0,866    0,116    0,728      0,866    0,791      0,712    0,948     0,851     L
+                 0,711    0,172    0,635      0,711    0,671      0,523    0,880     0,751     H
+Weighted Avg.    0,677    0,173    0,675      0,677    0,671      0,495    0,850     0,753     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 114  39  58 |   a = M
+  17 110   0 |   b = L
+  39   2 101 |   c = H
+
+

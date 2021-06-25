@@ -1,0 +1,170 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -B -C 0.25 -M 2
+Relation:     xAPI-Edu-Data
+Instances:    480
+Attributes:   17
+              gender
+              NationalITy
+              PlaceofBirth
+              StageID
+              GradeID
+              SectionID
+              Topic
+              Semester
+              Relation
+              raisedhands
+              VisITedResources
+              AnnouncementsView
+              Discussion
+              ParentAnsweringSurvey
+              ParentschoolSatisfaction
+              StudentAbsenceDays
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+StudentAbsenceDays = Under-7
+|   AnnouncementsView <= 10.0
+|   |   Topic = Math: L (2.0)
+|   |   Topic != Math
+|   |   |   Semester = F
+|   |   |   |   NationalITy = KW
+|   |   |   |   |   SectionID = B
+|   |   |   |   |   |   gender = M: L (3.0)
+|   |   |   |   |   |   gender != M: M (4.0/2.0)
+|   |   |   |   |   SectionID != B: M (8.0/1.0)
+|   |   |   |   NationalITy != KW: M (5.0)
+|   |   |   Semester != F: H (4.0/2.0)
+|   AnnouncementsView > 10.0
+|   |   VisITedResources <= 55.0
+|   |   |   ParentAnsweringSurvey = Yes
+|   |   |   |   NationalITy = Palestine: H (2.0)
+|   |   |   |   NationalITy != Palestine
+|   |   |   |   |   StageID = lowerlevel
+|   |   |   |   |   |   NationalITy = Jordan: M (3.0)
+|   |   |   |   |   |   NationalITy != Jordan: H (7.0/1.0)
+|   |   |   |   |   StageID != lowerlevel: M (21.0/2.0)
+|   |   |   ParentAnsweringSurvey != Yes
+|   |   |   |   NationalITy = KW
+|   |   |   |   |   GradeID = G-08: L (2.0)
+|   |   |   |   |   GradeID != G-08
+|   |   |   |   |   |   SectionID = C: L (2.0/1.0)
+|   |   |   |   |   |   SectionID != C: M (5.0)
+|   |   |   |   NationalITy != KW: M (16.0)
+|   |   VisITedResources > 55.0
+|   |   |   Relation = Father
+|   |   |   |   Topic = Chemistry: H (6.0)
+|   |   |   |   Topic != Chemistry
+|   |   |   |   |   Topic = History: M (6.0)
+|   |   |   |   |   Topic != History
+|   |   |   |   |   |   AnnouncementsView <= 82.0
+|   |   |   |   |   |   |   NationalITy = Tunis: M (2.0)
+|   |   |   |   |   |   |   NationalITy != Tunis
+|   |   |   |   |   |   |   |   ParentAnsweringSurvey = Yes
+|   |   |   |   |   |   |   |   |   NationalITy = Jordan: M (5.0)
+|   |   |   |   |   |   |   |   |   NationalITy != Jordan
+|   |   |   |   |   |   |   |   |   |   StageID = lowerlevel: H (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   StageID != lowerlevel
+|   |   |   |   |   |   |   |   |   |   |   Topic = Quran: H (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Topic != Quran: M (21.0/5.0)
+|   |   |   |   |   |   |   |   ParentAnsweringSurvey != Yes
+|   |   |   |   |   |   |   |   |   Topic = Biology: H (2.0)
+|   |   |   |   |   |   |   |   |   Topic != Biology
+|   |   |   |   |   |   |   |   |   |   PlaceofBirth = SaudiArabia
+|   |   |   |   |   |   |   |   |   |   |   raisedhands <= 86.0: H (2.0)
+|   |   |   |   |   |   |   |   |   |   |   raisedhands > 86.0: M (2.0)
+|   |   |   |   |   |   |   |   |   |   PlaceofBirth != SaudiArabia: M (15.0)
+|   |   |   |   |   |   AnnouncementsView > 82.0: H (7.0)
+|   |   |   Relation != Father
+|   |   |   |   GradeID = G-04: H (11.0)
+|   |   |   |   GradeID != G-04
+|   |   |   |   |   NationalITy = Iraq: H (8.0)
+|   |   |   |   |   NationalITy != Iraq
+|   |   |   |   |   |   Topic = Biology: H (6.0)
+|   |   |   |   |   |   Topic != Biology
+|   |   |   |   |   |   |   PlaceofBirth = Palestine: M (2.0)
+|   |   |   |   |   |   |   PlaceofBirth != Palestine
+|   |   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   |   Topic = History: H (2.0)
+|   |   |   |   |   |   |   |   |   Topic != History
+|   |   |   |   |   |   |   |   |   |   ParentAnsweringSurvey = Yes
+|   |   |   |   |   |   |   |   |   |   |   NationalITy = Palestine: M (2.0)
+|   |   |   |   |   |   |   |   |   |   |   NationalITy != Palestine
+|   |   |   |   |   |   |   |   |   |   |   |   Topic = French: H (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Topic != French
+|   |   |   |   |   |   |   |   |   |   |   |   |   NationalITy = Jordan: M (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   NationalITy != Jordan: H (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   ParentAnsweringSurvey != Yes: M (9.0/1.0)
+|   |   |   |   |   |   |   |   gender != M
+|   |   |   |   |   |   |   |   |   AnnouncementsView <= 50.0
+|   |   |   |   |   |   |   |   |   |   NationalITy = Palestine: M (2.0)
+|   |   |   |   |   |   |   |   |   |   NationalITy != Palestine
+|   |   |   |   |   |   |   |   |   |   |   AnnouncementsView <= 20.0: H (6.0)
+|   |   |   |   |   |   |   |   |   |   |   AnnouncementsView > 20.0
+|   |   |   |   |   |   |   |   |   |   |   |   ParentAnsweringSurvey = Yes
+|   |   |   |   |   |   |   |   |   |   |   |   |   raisedhands <= 36.0: M (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   raisedhands > 36.0: H (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ParentAnsweringSurvey != Yes: M (5.0)
+|   |   |   |   |   |   |   |   |   AnnouncementsView > 50.0: H (23.0)
+StudentAbsenceDays != Under-7
+|   VisITedResources <= 26.0
+|   |   Topic = Science
+|   |   |   AnnouncementsView <= 23.0: L (7.0)
+|   |   |   AnnouncementsView > 23.0: M (3.0)
+|   |   Topic != Science
+|   |   |   raisedhands <= 45.0: L (91.0/6.0)
+|   |   |   raisedhands > 45.0: M (2.0)
+|   VisITedResources > 26.0
+|   |   AnnouncementsView <= 11.0: L (9.0)
+|   |   AnnouncementsView > 11.0
+|   |   |   Topic = Math: M (4.0/2.0)
+|   |   |   Topic != Math
+|   |   |   |   ParentAnsweringSurvey = Yes: M (52.0/6.0)
+|   |   |   |   ParentAnsweringSurvey != Yes
+|   |   |   |   |   Discussion <= 19.0: L (8.0)
+|   |   |   |   |   Discussion > 19.0
+|   |   |   |   |   |   PlaceofBirth = Jordan
+|   |   |   |   |   |   |   raisedhands <= 45.0: M (5.0)
+|   |   |   |   |   |   |   raisedhands > 45.0: L (2.0)
+|   |   |   |   |   |   PlaceofBirth != Jordan: M (8.0/1.0)
+
+Number of Leaves  : 	53
+
+Size of the tree : 	105
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         352               73.3333 %
+Incorrectly Classified Instances       128               26.6667 %
+Kappa statistic                          0.5906
+Mean absolute error                      0.199 
+Root mean squared error                  0.3862
+Relative absolute error                 45.9776 %
+Root relative squared error             83.0209 %
+Total Number of Instances              480     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,687    0,223    0,707      0,687    0,697      0,466    0,749     0,669     M
+                 0,866    0,065    0,827      0,866    0,846      0,789    0,931     0,797     L
+                 0,683    0,133    0,683      0,683    0,683      0,550    0,828     0,651     H
+Weighted Avg.    0,733    0,155    0,732      0,733    0,732      0,576    0,820     0,698     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 145  22  44 |   a = M
+  16 110   1 |   b = L
+  44   1  97 |   c = H
+
+

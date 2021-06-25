@@ -1,0 +1,54 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 1000 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     xAPI-Edu-Data-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    480
+Attributes:   8
+              gender
+              Relation
+              raisedhands
+              VisITedResources
+              AnnouncementsView
+              ParentAnsweringSurvey
+              StudentAbsenceDays
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 1000 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.56 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         371               77.2917 %
+Incorrectly Classified Instances       109               22.7083 %
+Kappa statistic                          0.6499
+Mean absolute error                      0.2209
+Root mean squared error                  0.3386
+Relative absolute error                 51.0315 %
+Root relative squared error             72.7787 %
+Total Number of Instances              480     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,749    0,204    0,742      0,749    0,745      0,544    0,823     0,758     M
+                 0,843    0,059    0,836      0,843    0,839      0,781    0,963     0,881     L
+                 0,746    0,098    0,763      0,746    0,754      0,653    0,900     0,806     H
+Weighted Avg.    0,773    0,135    0,773      0,773    0,773      0,639    0,883     0,805     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 158  21  32 |   a = M
+  19 107   1 |   b = L
+  36   0 106 |   c = H
+
+
