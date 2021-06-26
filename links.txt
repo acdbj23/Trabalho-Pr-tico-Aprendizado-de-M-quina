@@ -1,0 +1,7 @@
+Link do dataset xAPI-EDU-DATA:
+
+https://www.kaggle.com/aljarah/xAPI-Edu-Data
+
+Link do notebook da atividade no Kaggle:
+
+https://www.kaggle.com/fabcruz/trabalho-pratico-am-uff
