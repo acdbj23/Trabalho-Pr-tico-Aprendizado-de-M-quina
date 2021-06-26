@@ -17,3 +17,7 @@ https://www.kaggle.com/aljarah/xAPI-Edu-Data
 Deixamos o notebook no diretório python deste projeto, mas se quiser, pode acessar diretamente no Kaggle.
 
 https://www.kaggle.com/fabcruz/trabalho-pratico-am-uff
+
+## Resultados dos experimentos no Weka
+
+Os resultados das execuções dos algoritmos de classificação, e as regras de associação estão armazenados no diretório weka-xAPI-educational como arquivos de texto e csv, respectivamente.
