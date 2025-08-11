@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Planejador de Aula STEM</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Planejador de Aula STEM</h1>
+    <form method="POST" action="/">
+        <label for="titulo">Título da Aula:</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <label for="objetivos">Objetivos:</label>
+        <textarea id="objetivos" name="objetivos" required></textarea>
+
+        <label for="recursos">Recursos:</label>
+        <textarea id="recursos" name="recursos" required></textarea>
+
+        <label for="atividades">Atividades:</label>
+        <textarea id="atividades" name="atividades" required></textarea>
+
+        <label for="avaliacao">Avaliação:</label>
+        <textarea id="avaliacao" name="avaliacao" required></textarea>
+
+        <button type="submit">Gerar Plano</button>
+    </form>
+</body>
+</html>
